@@ -1,6 +1,6 @@
 # FinArg-MTL: Multi-Granular Financial Argument Mining
 
-**Technical Documentation** | Version 1.0.0 | [Date]
+**Technical Documentation** | Version 1.0.0 | 
 
 ---
 

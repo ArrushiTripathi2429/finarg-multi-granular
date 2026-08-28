@@ -1,0 +1,43 @@
+# Git ignore file for FinArg project
+
+# Ignore raw data files
+data/
+*.csv
+*.parquet
+*.jsonl
+*.json
+*.h5
+*.pkl
+*.pickle
+
+# Ignore Hugging Face cache
+.cache/
+.cache/huggingface/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore log files
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
