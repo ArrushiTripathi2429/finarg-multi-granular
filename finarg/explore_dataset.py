@@ -7,7 +7,7 @@ print("="*60)
 print(" FINARG DATASET EXPLORATION")
 print("="*60)
 
-# --- Load the dataset ---
+
 file_path = Path(__file__).parent / "data" / "raw" / "finarg_ecc_train.csv"
 
 if not file_path.exists():
