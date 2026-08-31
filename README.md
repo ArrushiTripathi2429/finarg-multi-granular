@@ -188,8 +188,46 @@ Source	TheFinAI/finarg-ecc-auc_train
 │  └─────────────────────────────────────────────────────────┘  │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
-```
 
+
+┌─────────────────────────────────────────────────────────────────┐
+│              3 EXPERTS = 3 FINE-TUNING SESSIONS               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐  │
+│  │              SESSION 1: Expert 1 (Guidance)             │  │
+│  ├─────────────────────────────────────────────────────────┤  │
+│  │  Dataset: ONLY guidance sentences (2,500)              │  │
+│  │  Model: BERT + Heads (initialized from pre-trained)   │  │
+│  │  Epochs: 10                                            │  │
+│  │  Learning Rate: 2e-5                                   │  │
+│  │  Output: expert_guidance.pth                           │  │
+│  └─────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐  │
+│  │           SESSION 2: Expert 2 (Revenue/Profitability)   │  │
+│  ├─────────────────────────────────────────────────────────┤  │
+│  │  Dataset: ONLY revenue + profitability + cost +        │  │
+│  │           liquidity + investment sentences (3,000)     │  │
+│  │  Model: BERT + Heads (initialized from pre-trained)   │  │
+│  │  Epochs: 10                                            │  │
+│  │  Learning Rate: 2e-5                                   │  │
+│  │  Output: expert_revenue.pth                            │  │
+│  └─────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ┌─────────────────────────────────────────────────────────┐  │
+│  │           SESSION 3: Expert 3 (Strategy/Operations)     │  │
+│  ├─────────────────────────────────────────────────────────┤  │
+│  │  Dataset: ONLY strategy + operations + market +        │  │
+│  │           risk sentences (2,253)                       │  │
+│  │  Model: BERT + Heads (initialized from pre-trained)   │  │
+│  │  Epochs: 10                                            │  │
+│  │  Learning Rate: 2e-5                                   │  │
+│  │  Output: expert_strategy.pth                           │  │
+│  └─────────────────────────────────────────────────────────┘  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 
 
