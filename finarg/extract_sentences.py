@@ -4,19 +4,19 @@ import pandas as pd
 from pathlib import Path
 
 print("="*60)
-print("📤 EXTRACTING SENTENCES FOR ANNOTATION")
+print(" EXTRACTING SENTENCES FOR ANNOTATION")
 print("="*60)
 
 # Load original dataset
 file_path = Path(__file__).parent / "data" / "raw" / "finarg_ecc_train.csv"
 
 if not file_path.exists():
-    print(f"❌ File not found: {file_path}")
-    print("💡 Run download_finarg.py first.")
+    print(f" File not found: {file_path}")
+    print(" Run download_finarg.py first.")
     exit()
 
 df = pd.read_csv(file_path)
-print(f"✅ Loaded {len(df)} sentences")
+print(f" Loaded {len(df)} sentences")
 
 # Create annotation template with all sentences
 annotation_df = df[['id', 'text']].copy()
@@ -41,13 +41,13 @@ output_path = output_dir / "sentences_to_annotate.csv"
 # Save as CSV
 annotation_df.to_csv(output_path, index=False)
 
-print(f"\n✅ Created annotation file!")
-print(f"📁 Location: {output_path}")
-print(f"📊 Total sentences: {len(annotation_df)}")
-print(f"\n📝 Columns: {annotation_df.columns.tolist()}")
+print(f"\n Created annotation file!")
+print(f" Location: {output_path}")
+print(f" Total sentences: {len(annotation_df)}")
+print(f"\n Columns: {annotation_df.columns.tolist()}")
 
 print("\n" + "="*60)
-print("💡 NEXT STEPS:")
+print(" NEXT STEPS:")
 print("="*60)
 print("1. Open this CSV in Excel / VS Code / Google Sheets")
 print(f"   Path: {output_path}")

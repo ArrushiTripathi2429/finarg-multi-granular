@@ -28,7 +28,7 @@ print("="*60)
 print(f"\nData Types:")
 print(df.dtypes)
 
-print(f"\n🔍 Null Values:")
+print(f"\n Null Values:")
 print(df.isnull().sum())
 
 # --- Label Distribution ---
