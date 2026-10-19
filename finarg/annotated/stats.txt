@@ -1,0 +1,59 @@
+============================================================
+DATASET STATISTICS
+============================================================
+Total rows:                3314
+Total spans extracted:     796
+Rows with MULTIPLE spans:  117 (3.5%)
+Rows with ZERO spans:      2658 (80.2%)
+
+Sentence label distribution:
+sentence_label
+premise    1780
+claim      1534
+
+Target category distribution:
+target_category
+*strategy          952
+*other             684
+*revenue           601
+*guidance          224
+*market            192
+*operations        176
+*investment        133
+other              108
+*cost structure     88
+*risk               81
+*profitability      75
+
+Top 30 targets:
+target
+*other                   684
+*business strategy       631
+*demand                  256
+*new initiatives         179
+*outlook                 150
+*product strategy        140
+*revenue growth          120
+*competitive position    106
+*pricing                  99
+*revenue                  94
+*capital spending         64
+*supply chain             53
+*regulatory risk          51
+*operating expenses       49
+*sales volume             48
+*operations               48
+*guidance                 43
+*capacity                 42
+*r&d                      39
+*market expansion         36
+*gross margin             34
+*operating margin         30
+*macroeconomic risk       27
+*inventory                26
+*market share             23
+other                     16
+business strategy         14
+demand                    14
+*acquisitions             14
+*labor costs              14
